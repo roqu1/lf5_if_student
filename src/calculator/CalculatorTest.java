@@ -15,31 +15,31 @@ public class CalculatorTest {
 
     @Test
     public void GivenOperatorPlus_WhenCalculate_ThenReturnRightSummationString(){
-        assertEquals("3.0 + 5.5 = 8.5", calc.calculate(3.0,5.5, '+'));
+        assertEquals("3.0 + 5.5 = 8.5", calc.calculateIfElse(3.0,5.5, '+'));
     }
 
     @Test
     public void GivenOperatorMinus_WhenCalculate_ThenReturnRightSubractionString(){
-        assertEquals("5.5 - 3.5 = 2.0", calc.calculate(5.5,3.5, '-'));
+        assertEquals("5.5 - 3.5 = 2.0", calc.calculateIfElse(5.5,3.5, '-'));
     }
 
     @Test
     public void GivenOperatorMultiplication_WhenCalculate_ThenReturnRightMultiplicationString(){
-        assertEquals("5.5 x 3.5 = 19.25", calc.calculate(5.5,3.5, '*'));
+        assertEquals("5.5 x 3.5 = 19.25", calc.calculateIfElse(5.5,3.5, '*'));
     }
 
     @Test
     public void GivenOperatorDivision_WhenCalculate_ThenReturnRightMultiplicationString(){
-        assertEquals("9.0 : 3.0 = 3.0", calc.calculate(9.0,3.0, '/'));
+        assertEquals("9.0 : 3.0 = 3.0", calc.calculateIfElse(9.0,3.0, '/'));
     }
 
     @Test
     public void GivenOperatorDivisionNumber2EqualsZero_WhenCalculate_ThenReturnErrorString(){
-        assertEquals("Division durch 0 nicht möglich!", calc.calculate(9.0,0.0, '/'));
+        assertEquals("Division durch 0 nicht möglich!", calc.calculateIfElse(9.0,0.0, '/'));
     }
 
     @Test
     public void GivenWrongOperator_WhenCalculate_ThenReturnErrorString(){
-        assertEquals("Sie müssen einen der vier Operatoren +,-,*,/ eingeben!", calc.calculate(9.0,8.0, '§'));
+        assertEquals("Sie müssen einen der vier Operatoren +,-,*,/ eingeben!", calc.calculateIfElse(9.0,8.0, '§'));
     }
 }
